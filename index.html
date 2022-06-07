@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your description goes here">
+    <meta name="keywords" content="one, two, three">
+      
+    <title>Minion Hijinxs</title>
+
+		<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <section id="sideBar">
+      <ul id="navButtons">
+        <li id="startGame" class="activePhase startGame">Play!</li> <!--Default option, can replace/hide once cards are generated-->
+        <li id="turnCounter" class="instruction">Turn: 0</li> <!--displays the turn-->
+<!--         <li id="turnPhase" class="instruction">Turn Phase:</li> <!--displays the turn-->
+        <li id="selectCardStep" class="playStep">Select a Card</li> <!--Pull next game instruction here eg select card-->
+        <li id="playTurnStep" class="playStep">End Turn</li> <!--Can use this button to execute the turn and commence battle etc-->
+        <li id="damageStep" class="playStep">Damage Resolves</li>
+        <li id="cleanupStep" class="playStep">Clean Up</li>
+        <li id="cpuTurnStep" class="playStep">CPU's Turn</li>
+      </ul>
+  </section>
+	<main id="board">
+    <section id="cpuSide">
+      <section id="cpuHand">
+      </section>
+      <section id="cpuPlayArea">
+      </section>
+    </section>
+    <section id="userSide">
+      <section id="userPlayArea">
+      </section>
+      <section id="userHand">
+      </section>
+    </section>
+	</main>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
