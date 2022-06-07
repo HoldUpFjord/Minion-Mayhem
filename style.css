@@ -1,0 +1,189 @@
+
+ /******************************\
+( ====        LAYOUT        ==== )
+ \******************************/
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font: size; 62.5%;
+}
+
+body {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-image: url('https://images.unsplash.com/photo-1615799998586-54a1591888bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=710&q=80');
+  background-size: 100%;
+  font-family: Roboto, sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+#sideBar {
+  height: 100vh;
+  border-right: 3px solid black;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: calc(100% - 200px);
+}
+
+#cpuSide, #userSide {
+  height: 50%;
+  width: 100%;
+}
+
+ /******************************\
+( ====    SIDEBAR STYLES    ==== )
+ \******************************/
+
+#sideBar > h1 {
+  text-align: center;
+}
+
+#navButtons {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+#navButtons > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 75%;
+  margin: 10px;
+  padding: 2px;
+  background: lightgray;
+  border: 3px solid black;
+  box-shadow: 6px 4px rgba(0,0,0,.3);
+}
+
+#navButtons > li.activePhase {
+  font-weight: bold;
+  border: 3px solid #85c0ff;
+}
+
+/*
+.finished_phase {
+    background-color: darkcyan;
+    opacity: 50%;
+}
+*/
+
+ /******************************\
+( ====   PLAY AREA STYLES   ==== )
+ \******************************/
+
+#cpuHand, #userHand, #cpuPlayArea, #userPlayArea {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cpuPlayArea, #userPlayArea {
+  background: rgba(0, 0, 0, .5)
+}
+
+ /*****************************\
+( ====     CARD STYLES     ==== )
+ \*****************************/
+
+.cardContainer{
+  border: 3px solid black;
+  background-color:wheat;
+  border-radius: 5%;
+  box-shadow: 6px 4px rgba(0,0,0,.3);
+  height: 225px;
+  max-height: 95%;
+  width: 175px;
+  max-width: 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 1%;
+}
+
+.cardTop {
+  width: 90%;
+  margin: 0 0 0 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  font-size: .75rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.cardArt {
+  max-width: 100%;
+  min-height: 90px;
+  border: 2px solid black;
+  border-radius: 5px 5px 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.heroClass {
+  width: 100%;
+  font-size: .7rem;
+  background: #6d3f26;
+  color: #dbdbdb;
+  border: 1px solid black; 
+  border-top: 0;
+  border-radius: 0 0 5px 5px;
+}
+
+.statContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 0 0 5%;
+  font-size: .7rem;
+}
+
+.attackVal, .defenseVal {
+  margin-bottom: 2px;
+  border: 2px ridge;
+  border-radius: 0px;
+}
+
+span.attackVal:before {
+  color: white;
+  content: '⚔️';
+}
+
+span.defenseVal:before {
+  color: white;
+  content: '🛡️';
+}
+
+.cardContainer:hover{
+  border: 3px solid #b0b0b0;
+  
+}
+
+.cardContainer.selected {
+  border: 3px solid white;
+}
